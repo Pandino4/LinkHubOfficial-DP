@@ -1,0 +1,201 @@
+@font-face {font-family: 'RioDeJaneiro'; src: url('fonts/RioDeJaneiro.ttf') format('truetype'); font-weight: normal; font-style: normal;}
+
+body{
+    text-align: center;
+    justify-items: center;
+    touch-action: pan-y;
+    background: linear-gradient(180deg, #222c75, #3f1566);
+    color: #e0e0ff;
+    user-select:none;
+}
+
+body::after{
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(white 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+    opacity: 0.10; /* subtle stars effect */
+    top:0;
+    left:0;
+    z-index:0;
+}
+
+
+/*======================================================================*/
+
+
+#section1{
+    margin-top: 2em;
+}
+
+img{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    border: 2px solid rgba(255,255,255,0.2);
+    object-fit: cover; 
+    object-position: center;
+    user-select:none;
+}
+
+
+
+/*======================================================================*/
+
+
+h1{
+    color:#f0f0ff; 
+    position: relative;
+    bottom: 15px;
+    font-family: 'RioDeJaneiro', cursive;
+    user-select:none;
+}
+
+h4{
+    color:#d0d0ff; 
+    position: relative;
+    bottom: 25px;
+    font-family: 'RioDeJaneiro', cursive;
+    user-select:none;
+}
+
+
+/*======================================================================*/
+
+
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 0 auto;
+    margin-top: -10px; /* 👈 fine-tune vertical centering */
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/*======================================================================*/
+
+
+
+#section2{
+    margin-top: 2em;
+}
+
+p{
+    color:#c0c0ff;
+    user-select:none;
+}
+
+button{
+    width:350px;
+    height:60px;
+    border:1px solid rgba(208,208,255,0.6);
+    background: rgba(50,45,80,0.6);
+    border-radius:27px;
+    margin:0.8em auto;
+    cursor:pointer;
+    transition: 0.2s;
+    color:#e0e0ff;
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(6px);
+}
+
+.btname{
+    width: 200px;
+    text-align: center;
+    justify-items: center;
+}
+
+button:hover{
+    background: linear-gradient(135deg, rgb(100, 79, 236), rgb(74, 45, 129));
+    color: #ffffff;
+    box-shadow:
+        0 0 12px rgba(140, 120, 255, 0.6),
+        0 0 25px rgba(90, 160, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+button:hover ion-icon{
+    color: #ffffff;
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 6px rgba(180, 160, 255, 0.8));
+}
+
+button:active{
+    transform: scale(0.97);
+}
+
+
+/*======================================================================*/
+
+
+
+ion-icon{
+    width:35px;
+    height:35px;
+    color:#d0d0ff;
+    transition: all 0.4s ease;
+    display: block;
+}
+
+a{
+    text-decoration:none;
+    color:#e0e0ff;
+    user-select:none;
+    font-family: 'RioDeJaneiro', cursive;
+}
+
+ion-icons:hover{
+    background: linear-gradient(
+        135deg,
+        rgb(120, 100, 255),
+        rgb(90, 160, 255)
+    );
+    color:#d0d0ff;
+    box-shadow:
+        0 0 12px rgba(140, 120, 255, 0.6),
+        0 0 25px rgba(90, 160, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+ion-icons:hover{
+    color:#d0d0ff;
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 6px rgba(180, 160, 255, 0.8));
+}
+
+a:hover ion-icon{
+    color:#d0d0ff;
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 6px rgba(180, 160, 255, 0.8));
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #d8cfff; /* soft purple/blue for moonlight theme */
+    margin: 2em 0 1em 0;
+    font-weight: 500;
+    font-family: 'RioDeJaneiro', cursive;
+    font-size: 1.1em;
+}
+
+.section-title::before,
+.section-title::after {
+    content: "";
+    flex: 1;
+    border-top: 2px solid #d8cfff; /* line color matching theme */
+    margin: 0 10px; /* spacing between text and line */
+}

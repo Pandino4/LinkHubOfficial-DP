@@ -1,0 +1,180 @@
+
+
+body{
+    text-align: center;
+    justify-items: center;
+    touch-action: pan-y;
+    background: linear-gradient(180deg, #fabad2, #f579aa);
+    color: #5a2d44;
+    user-select:none;
+}
+
+body::after{
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgb(255, 255, 255) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+    opacity: 0.50;
+    top:0;
+    left:0;
+    z-index:0;
+}
+
+/*======================================================================*/
+
+
+#section1{
+    margin-top: 2em;
+}
+
+img{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    border: 2px solid rgba(255,182,210,0.6);
+    object-fit: cover; 
+    object-position: center;
+    user-select:none;
+}
+
+
+/*======================================================================*/
+
+
+h1{
+    color:#6b2f4a;
+    position: relative;
+    bottom: 15px;
+    font-style: italic;
+    user-select:none;
+}
+
+h4{
+    color:#8a4563;
+    position: relative;
+    bottom: 25px;
+    font-style: italic;
+    user-select:none;
+}
+
+
+/*======================================================================*/
+
+
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 0 auto;
+    margin-top: -10px; /* 👈 fine-tune vertical centering */
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+/*======================================================================*/
+
+
+#section2{
+    margin-top: 2em;
+}
+
+p{
+    color:#9a4d6b;
+    user-select:none;
+}
+
+button{
+    width:350px;
+    height:60px;
+    border:1px solid rgba(255,182,210,0.9);
+    background: rgba(255,255,255,0.65);
+    border-radius:27px;
+    margin:0.8em auto;
+    cursor:pointer;
+    color:#6b2f4a;
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+    transition: background 0.35s ease, box-shadow 0.35s ease, transform 0.2s ease;
+    backdrop-filter: blur(6px);
+}
+
+.btname{
+    width: 200px;
+    text-align: center;
+    justify-items: center;
+}
+
+/* calm hover – high contrast, no color clash */
+button:hover{
+    background:#ffffff;
+    box-shadow:
+        0 6px 18px rgba(255,182,210,0.45),
+        inset 0 0 0 1px rgba(255,182,210,0.9);
+    transform: translateY(-2px);
+}
+
+button:hover ion-icon{
+    color:#b24d75;
+    transform: scale(1.12);
+    filter: drop-shadow(0 0 4px rgba(255,182,210,0.6));
+}
+
+button:active{
+    transform: scale(0.97);
+}
+
+
+/*======================================================================*/
+
+
+ion-icon{
+    width:35px;
+    height:35px;
+    color:#8a4563;
+    transition: all 0.35s ease;
+    display: block;
+}
+
+a{
+    text-decoration:none;
+    color:#6b2f4a;
+    user-select:none;
+    font-style: italic;
+}
+
+a:hover ion-icon{
+    color:#b24d75;
+    transform: scale(1.12);
+    filter: drop-shadow(0 0 4px rgba(255,182,210,0.6));
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffccd8; /* pink theme line & text color */
+    margin: 2em 0 1em 0;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+.section-title::before,
+.section-title::after {
+    content: "";
+    flex: 1;
+    border-top: 2px solid #ffccd8; /* matches theme */
+    margin: 0 10px; /* spacing between text and line */
+}
+
+

@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400&display=swap');
+
+body{
+    text-align: center;
+    justify-items: center;
+    touch-action: pan-y;
+    background: linear-gradient(180deg, #313144, #0b0f22);
+    color: #e6e8ff;
+    user-select:none;
+}
+
+body::after{
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(white 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+    opacity: 0.08;
+    top:0;
+    left:0;
+    z-index:0;
+}
+
+/*======================================================================*/
+
+
+#section1{
+    margin-top: 2em;
+}
+
+img{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    border: 2px solid rgba(255,255,255,0.25);
+    object-fit: cover; 
+    object-position: center;
+    user-select:none;
+}
+
+
+/*======================================================================*/
+
+
+h1{
+    color:#f2f4ff;
+    position: relative;
+    bottom: 15px;
+    font-family: 'Orbitron', sans-serif;
+    user-select:none;
+}
+
+h4{
+    color:#c9ccff;
+    position: relative;
+    bottom: 25px;
+    font-family: 'Orbitron', sans-serif;
+    user-select:none;
+}
+
+
+/*======================================================================*/
+
+
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 0 auto;
+    margin-top: -10px; /* 👈 fine-tune vertical centering */
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/*======================================================================*/
+
+
+#section2{
+    margin-top: 2em;
+}
+
+p{
+    color:#b8bcff;
+    user-select:none;
+}
+
+button{
+    width:350px;
+    height:60px;
+    border:1px solid rgba(180,185,255,0.45);
+    background: rgba(40,45,70,0.75);
+    border-radius:27px;
+    margin:0.8em auto;
+    cursor:pointer;
+    color:#e6e8ff;
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+    transition: background 0.35s ease, box-shadow 0.35s ease, transform 0.2s ease;
+    backdrop-filter: blur(6px);
+}
+
+.btname{
+    width: 200px;
+    text-align: center;
+    justify-items: center;
+}
+
+/* clean dark hover – glow, no flash */
+button:hover{
+    background: rgba(55,60,100,0.9);
+    box-shadow: 0 6px 20px rgba(120,130,255,0.35), inset 0 0 0 1px rgba(170,175,255,0.5);
+    transform: translateY(-2px);
+}
+
+button:hover ion-icon{
+    color:#ffffff;
+    transform: scale(1.12);
+    filter: drop-shadow(0 0 6px rgba(160,170,255,0.7));
+}
+
+button:active{
+    transform: scale(0.97);
+}
+
+
+/*======================================================================*/
+
+
+ion-icon{
+    width:35px;
+    height:35px;
+    color:#c9ccff;
+    transition: all 0.35s ease;
+    display: block;
+}
+
+a{
+    text-decoration:none;
+    color:#e6e8ff;
+    user-select:none;
+    font-family: 'Orbitron', sans-serif;
+}
+
+a:hover ion-icon{
+    color:#ffffff;
+    transform: scale(1.12);
+    filter: drop-shadow(0 0 6px rgba(160,170,255,0.7));
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #c9ccff; /* soft light color for dark theme */
+    margin: 2em 0 1em 0;
+    font-weight: 500;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1em;
+}
+
+.section-title::before,
+.section-title::after {
+    content: "";
+    flex: 1;
+    border-top: 2px solid #c9ccff; /* line color matching dark theme */
+    margin: 0 10px; /* spacing between text and line */
+}
